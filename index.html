@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animated Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-container" role="main" aria-label="Login form">
+    <div class="monkey-container" aria-hidden="true" aria-label="Funny animated monkey face">
+      <div class="monkey-face">
+        <div class="ear left" aria-hidden="true">
+          <div class="ear-inner"></div>
+        </div>
+        <div class="ear right" aria-hidden="true">
+          <div class="ear-inner"></div>
+        </div>
+        <div class="monkey-inner-face">
+          <div class="eyebrows">
+            <div class="eyebrow left"></div>
+            <div class="eyebrow right"></div>
+          </div>
+          <div class="eyes">
+            <div class="eye left-eye" id="leftEye">
+              <div class="eye-lid"></div>
+              <div class="pupil"></div>
+            </div>
+            <div class="eye right-eye" id="rightEye">
+              <div class="eye-lid"></div>
+              <div class="pupil"></div>
+            </div>
+          </div>
+          <div class="mouth" role="img" aria-label="Smiling monkey face"></div>
+        </div>
+      </div>
+    </div>
+
+    <form id="loginForm" autocomplete="off" novalidate>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          name="username"
+          autocomplete="username"
+          spellcheck="false"
+          required
+          autofocus
+          placeholder="Enter your username"
+        />
+        <span class="material-icons">person</span>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          required
+          placeholder="Enter your password"
+        />
+        <span class="material-icons" id="togglePassword">visibility</span>
+      </div>
+      <button type="submit" aria-label="Log in">Log In</button>
+    </form>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

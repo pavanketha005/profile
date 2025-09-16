@@ -1,0 +1,317 @@
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f4f8;
+  overflow: hidden;
+}
+.login-container {
+  background: rgba(255 255 255 / 0.07);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  box-shadow: 0 14px 40px rgb(0 0 0 / 0.5);
+  width: 400px;
+  max-width: 90vw;
+  padding: 48px 40px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  width: 100%;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 36px;
+}
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 16px 48px 16px 18px;
+  border-radius: 16px;
+  border: 2px solid #44617b;
+  font-size: 1.2rem;
+  background: rgba(255 255 255 / 0.18);
+  color: #f1f5f9;
+  font-weight: 600;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #e11d48;
+  background: rgba(255 255 255 / 0.3);
+}
+.material-icons {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  cursor: pointer;
+  user-select: none;
+  font-size: 28px;
+}
+button {
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #e11d48, #3b82f6);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgb(225 29 72 / 0.7);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover,
+button:focus {
+  background: linear-gradient(90deg, #bf1940, #2563eb);
+  box-shadow: 0 14px 32px rgb(225 29 72 / 0.9);
+  outline: none;
+}
+
+/* Monkey Container */
+.monkey-container {
+  position: relative;
+  width: 160px;
+  height: 170px;
+  margin-bottom: 48px;
+  user-select: none;
+  animation: bob 4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Monkey face */
+.monkey-face {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6f4e37, #a3754a);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 -6px 12px #5a3e29,
+    0 10px 20px rgb(0 0 0 / 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  filter: drop-shadow(0 0 2px #321e0ccc);
+}
+
+/* Monkey inner face oval */
+.monkey-inner-face {
+  background: #eecda3;
+  border-radius: 60% / 60%;
+  width: 120px;
+  height: 110px;
+  box-shadow: inset 0 6px 14px #b4825a;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Monkey ears */
+.ear {
+  position: absolute;
+  top: 30px;
+  width: 50px;
+  height: 60px;
+  background: linear-gradient(135deg, #6f4e37, #8b6447);
+  border-radius: 50% / 60%;
+  box-shadow: inset 0 6px 10px #5a3e29;
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.3));
+}
+.ear.left {
+  left: -40px;
+  transform: rotate(-10deg);
+}
+.ear.right {
+  right: -40px;
+  transform: rotate(10deg);
+}
+.ear-inner {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 26px;
+  height: 36px;
+  background: #f3d3ab;
+  border-radius: 60% / 60%;
+  box-shadow: inset 0 4px 8px #d7b887;
+}
+
+/* Eyes container */
+.eyes {
+  display: flex;
+  gap: 36px;
+  margin-top: 14px;
+  position: relative;
+}
+
+/* Single Eye */
+.eye {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: #fff8de;
+  border-radius: 50%;
+  box-shadow:
+    0 0 8px #d2b47a,
+    inset 0 2px 6px #f1e6bc;
+  overflow: visible;
+}
+
+/* Pupil */
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle at 40% 40%, #3a250a, #000000);
+  border-radius: 50%;
+  box-shadow: 0 0 8px #63411dcc;
+  transition: transform 0.3s ease;
+}
+
+/* Eye lid for blinking */
+.eye-lid {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  left: 0;
+  background: #6f4e37;
+  border-radius: 50%;
+  transform-origin: center center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  box-shadow: inset 0 3px 12px #563f29;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Eyes closed */
+.eye.closed .eye-lid {
+  transform: translateY(0);
+}
+
+/* Mouth - a closed smile with a subtle curve */
+.mouth {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 24px;
+  border-radius: 0 0 60% 60% / 0 0 100% 100%;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+.mouth::before {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 12px;
+  border-radius: 50% / 80%;
+  border-bottom: 4px solid #3d2718;
+}
+
+/* Eyebrows */
+.eyebrows {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;
+}
+.eyebrow {
+  width: 38px;
+  height: 10px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg, #4a2f11, #6c4019);
+  filter: drop-shadow(0 0 1px #5f3d17);
+  transform-origin: center bottom;
+  animation-fill-mode: both;
+}
+/* Eyebrow wiggle animations */
+@keyframes brow-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(12deg); }
+}
+.eyebrow.left {
+  animation: brow-wiggle 4s ease-in-out infinite;
+}
+@keyframes brow-wiggle-right {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-12deg); }
+}
+.eyebrow.right {
+  animation: brow-wiggle-right 4s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90vw;
+    padding: 36px 28px 40px;
+  }
+  form {
+    width: 100%;
+  }
+  .eyes {
+    margin-top: 10px;
+    gap: 28px;
+  }
+  .eye {
+    width: 36px;
+    height: 36px;
+  }
+  .pupil {
+    width: 12px;
+    height: 12px;
+  }
+  .material-icons {
+    font-size: 24px;
+    right: 12px;
+  }
+  button {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+  .monkey-container {
+    width: 130px;
+    height: 140px;
+    margin-bottom: 40px;
+    animation-duration: 5s;
+  }
+}
