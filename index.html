@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,6 @@
       padding: 40px 15px;
     }
 
-
     .container {
       max-width: 800px;
       margin: auto;
@@ -35,27 +34,24 @@
       background: url("https://img.freepik.com/premium-photo/abstract-blue-watercolor-background_948023-2790.jpg") no-repeat center center/cover;
     }
 
-
     .container::before {
       content: "";
-      position: absolute;
+      position:absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0,0,0,0.6);
       z-index: 0;
     }
-
 
     .container > * {
       position: relative;
       z-index: 1;
     }
 
-
     h1 {
       font-size: 1.6rem;
       margin-bottom: 10px;
       color: #00d4ff;
-      border-bottom: 2px solid navyblue;
+      border-bottom: 2px solid #00d4ff;
       display: inline-block;
       padding-bottom: 4px;
     }
@@ -67,10 +63,10 @@
       margin-bottom: 6px;
     }
 
-
     p {
       margin-bottom: 14px;
       color: #eee;
+      font-weight: bold;
     }
 
     section {
@@ -85,6 +81,20 @@
 
     .contact p {
       line-height: 1.8;
+      font-weight: bold;
+    }
+
+    /* ===== Unified Link Styling (Email + Pincode) ===== */
+    .link {
+      color: lab(94.17% 0.34 0.11);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .link:hover {
+      color: #ffd166;
+      text-shadow: 0 0 6px rgba(255, 209, 102, 0.8);
     }
 
     @media (max-width: 600px) {
@@ -114,10 +124,10 @@
     <section class="contact">
       <h1>CONTACT</h1>
       <p>
-        pavanketha04@gmail.com<br>
+        <a class="link" href="mailto:pavanketha04@gmail.com">pavanketha04@gmail.com</a><br>
         7013904631<br>
-        Bandarulanka-533221<br>
-        Amalapuram-533201<br>
+        Bandarulanka-<a class="link" href="https://en.wikipedia.org/wiki/Bandarulanka" >533221</a><br>
+        Amalapuram-<a class="link" href="https://en.wikipedia.org/wiki/Amalapuram" >533201</a><br>
         Andhra Pradesh
       </p>
     </section>
@@ -177,3 +187,4 @@
   </div>
 </body>
 </html>
+
