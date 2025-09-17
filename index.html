@@ -1,73 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Animated Login</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavan Ketha - Resume</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 15px;
+    }
+
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+
+      /* background image */
+      background: url("https://img.freepik.com/premium-photo/abstract-blue-watercolor-background_948023-2790.jpg") no-repeat center center/cover;
+    }
+
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+
+    .container > * {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #00d4ff;
+      border-bottom: 2px solid navyblue;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #ffd166;
+      margin-top: 15px;
+      margin-bottom: 6px;
+    }
+
+
+    p {
+      margin-bottom: 14px;
+      color: #eee;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      margin: 20px 0;
+    }
+
+    .contact p {
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="login-container" role="main" aria-label="Login form">
-    <div class="monkey-container" aria-hidden="true" aria-label="Funny animated monkey face">
-      <div class="monkey-face">
-        <div class="ear left" aria-hidden="true">
-          <div class="ear-inner"></div>
-        </div>
-        <div class="ear right" aria-hidden="true">
-          <div class="ear-inner"></div>
-        </div>
-        <div class="monkey-inner-face">
-          <div class="eyebrows">
-            <div class="eyebrow left"></div>
-            <div class="eyebrow right"></div>
-          </div>
-          <div class="eyes">
-            <div class="eye left-eye" id="leftEye">
-              <div class="eye-lid"></div>
-              <div class="pupil"></div>
-            </div>
-            <div class="eye right-eye" id="rightEye">
-              <div class="eye-lid"></div>
-              <div class="pupil"></div>
-            </div>
-          </div>
-          <div class="mouth" role="img" aria-label="Smiling monkey face"></div>
-        </div>
-      </div>
-    </div>
+  <div class="container">
 
-    <form id="loginForm" autocomplete="off" novalidate>
-      <div class="input-group">
-        <label for="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          name="username"
-          autocomplete="username"
-          spellcheck="false"
-          required
-          autofocus
-          placeholder="Enter your username"
-        />
-        <span class="material-icons">person</span>
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          autocomplete="current-password"
-          required
-          placeholder="Enter your password"
-        />
-        <span class="material-icons" id="togglePassword">visibility</span>
-      </div>
-      <button type="submit" aria-label="Log in">Log In</button>
-    </form>
-  </main>
-<script src="script.js"></script>
+    <section>
+      <h1>OBJECTIVE</h1>
+      <p>To secure a challenging position in a reputed organisation to
+         utilize my skills, while making a significant contribution
+         to the success of my company besides establishing a career for myself.</p>
+    </section>
+    <hr>
+
+    <section class="contact">
+      <h1>CONTACT</h1>
+      <p>
+        pavanketha04@gmail.com<br>
+        7013904631<br>
+        Bandarulanka-533221<br>
+        Amalapuram-533201<br>
+        Andhra Pradesh
+      </p>
+    </section>
+    <hr>
+
+    <section>
+      <h1>STRENGTHS</h1>
+      <p>
+        Self-Motivated<br>
+        Good Team Work<br>
+        Good at Communication<br>
+        Technically Updated
+      </p>
+    </section>
+    <hr>
+
+    <section>
+      <h1>SKILLS</h1>
+      <p>
+        C Programming<br>
+        Python Programming<br>
+        Java Programming<br>
+        HTML, CSS
+      </p>
+    </section>
+    <hr>
+
+    <section>
+      <h1>LANGUAGES KNOWN</h1>
+      <p>Telugu<br>English</p>
+    </section>
+    <hr>
+
+    <section>
+      <h1>EDUCATION</h1>
+      <h3>Aditya Degree College, Amalapuram</h3>
+      <p>
+        Bachelor Of Computer Applications (BCA)<br>
+        Year of Passing: Pursuing<br>
+        CGPA: 8.1
+      </p>
+
+      <h3>Aditya Junior College, Amalapuram</h3>
+      <p>
+        Board Of Intermediate Education, A.P<br>
+        Year of Passing: 2021-2023
+      </p>
+
+      <h3>Wisdom Primary High School</h3>
+      <p>
+        Board Of Secondary Education, A.P<br>
+        Year of Passing: 2021<br>
+        CGPA: 9.5
+      </p>
+    </section>
+
+  </div>
 </body>
 </html>
