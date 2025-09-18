@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SAI PAVAN KETHA - Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 15px;
+            
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            background: url("https://wallpaperaccess.com/full/10075365.jpg") no-repeat center center/cover;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 0;
+        }
+
+        .container > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #00d4ff;
+            border-bottom: 2px solid #00d4ff;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color:rgb(245, 43, 134);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgb(251, 248, 248);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #ffd166;
+            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin: 20px 0;
+        }
+
+        .contact p {
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        .link {
+            color: #f2f3f3;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .link:hover {
+            color: #ffd166;
+            text-shadow: 0 0 6px rgba(255, 209, 102, 0.8);
+        }
+
+        /* Portfolio-specific styles */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+         .header h1 {
+            font-size: 2.5rem;
+            color: #f70a2e;
+            border-bottom: none;
+            text-shadow: 2px 2px 4px rgb(136, 136, 157);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #00d4ff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+
+        <section class="header">
+            <h1>SAI PAVAN KETHA</h1>
+            <h2>Portfolio and Resume</h2>
+        </section>
+
+        <section>
+            <h1>OBJECTIVE</h1>
+            <p>To secure a challenging position in a reputed organization to utilize my skills, while making a significant contribution to the success of my company besides establishing a career for myself.</p>
+        </section>
+        <hr>
+
+        <section class="contact">
+            <h1>CONTACT</h1>
+            <p>
+                <a class="link" href="mailto:pavanketha04@gmail.com">pavanketha04@gmail.com</a><br>
+                7013904631<br>
+                Bandarulanka-<a class="link" href="https://en.wikipedia.org/wiki/Bandarulanka">533221</a><br>
+                Amalapuram-<a class="link" href="https://en.wikipedia.org/wiki/Amalapuram">533201</a><br>
+                Andhra Pradesh
+            </p>
+        </section>
+        <hr>
+
+        <section class="Education">
+            <h1>EDUCATION</h1>
+            <h3>Aditya Degree College, Amalapuram</h3>
+            <p>
+                Bachelor of Computer Applications (BCA)<br>
+                Year of Passing: Pursuing<br>
+                CGPA: 8.1 
+            </p>
+            <h3>Aditya Junior College, Amalapuram</h3>
+            <p>
+                Board of Intermediate Education, A.P <br>
+                Year of Passing: 2021-2023
+            </p>
+            <h3>Wisdom Primary & High School</h3>
+            <p>
+                Board of Secondary Education, A.P <br>
+                Year of Passing: 2021<br>
+                CGPA: 9.5 
+            </p>
+        </section>
+        <hr>
+
+        <section>
+            <h1>SKILLS</h1>
+            <ul>
+                <li>C Programming </li>
+                <li>Python Programming </li>
+                <li>Java Programming </li>
+                <li>HTML, CSS</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section>
+            <h1>STRENGTHS</h1>
+            <ul>
+                <li>Self-Motivated </li>
+                <li>Good teamwork </li>
+                <li>Good at Communication </li>
+                <li>Adaptability </li>
+                <li>Technically updated </li>
+            </ul>
+        </section>
+        <hr>
+
+        <section>
+            <h1>CURRICULAR ACTIVITIES</h1>
+            <p>Engaged in school associations and actively participated in related events.</p>
+        </section>
+        <hr>
+        
+        <section>
+            <h1>LANGUAGES KNOWN</h1>
+            <ul>
+                <li>Telugu </li>
+                <li>English </li>
+            </ul>
+        </section>
+        <hr>
+
+        <section>
+            <h1>DECLARATION</h1>
+            <p>Thereby declare that all details furnished above are true to my knowledge and I undertake to inform you of changes therein immediately.</p>
+        </section>
+
+    </div>
+</body>
+</html>
